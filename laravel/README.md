@@ -17,6 +17,11 @@ Docker内
 # php artisan serve --host 0.0.0.0
 
 自身のPC
+ブラウザ打鍵前に以下のコマンドを叩く
+```
+$ docker-machine ssh default -L 8000:localhost:8000
+```
+
 ブラウザで以下URLを打鍵
 http://localhost:8000/
 ```
