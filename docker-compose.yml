@@ -1,10 +1,21 @@
 version: "3"
 services:
-  # Laravel(Apache+PHP7.0)
+  # Laravel(PHP7.2)
   laravel:
     build: ./laravel
     ports:
       - 8000:8000
     volumes:
       - ./laravel/html:/var/www/html
+    working_dir: "/var/www/html"
+    tty: true
+
+  # Vue.js
+  vue:
+    build: ./vue
+    ports:
+      - 8080:8080
+    volumes:
+      - ./vue/html:/html
+    working_dir: "/html"
     tty: true

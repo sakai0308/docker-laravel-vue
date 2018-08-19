@@ -2,6 +2,7 @@
 ```
 自身のPC
 $ docker-compose build
+  ↑既にVue.jsの環境構築時に実行している場合は不要
 $ docker-compose up -d
 $ docker-compose exec laravel bash
 
@@ -12,6 +13,7 @@ Docker内
 # Laravelを起動する手順
 ```
 Docker内
+# cd ec_api
 # php artisan serve --host 0.0.0.0
 
 自身のPC
