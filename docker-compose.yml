@@ -9,6 +9,8 @@ services:
       - ./laravel/html:/var/www/html
     working_dir: "/var/www/html"
     tty: true
+    depends_on:
+      - mysql
 
   # Vue.js
   vue:
@@ -19,3 +21,20 @@ services:
       - ./vue/html:/html
     working_dir: "/html"
     tty: true
+
+  # MySQL
+  mysql:
+    image: mysql:5.7.22
+    ports:
+      - 3306:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: test
+        MYSQL_PASSWORD: test
+        MYSQL_DATABASE: sample_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+# named volumeでデータを永続化
+volumes:
+  mysql-data:
