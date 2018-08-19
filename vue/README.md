@@ -14,7 +14,7 @@ Docker内
 ```
 Docker内
 # cd ec_web
-# HOST=0.0.0.0 npm run dev
+# HOST=0.0.0.0 PORT=80 npm run dev
 
 自身のPC
 ブラウザで以下URLを打鍵
