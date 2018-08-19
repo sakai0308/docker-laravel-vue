@@ -1,0 +1,10 @@
+version: "3"
+services:
+  # Laravel(Apache+PHP7.0)
+  laravel:
+    build: ./laravel
+    ports:
+      - 8000:8000
+    volumes:
+      - ./laravel/html:/var/www/html
+    tty: true
