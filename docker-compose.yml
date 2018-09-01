@@ -19,6 +19,7 @@ services:
       - 80:80
     volumes:
       - ./vue/html:/html
+      - node-module-data:/html/ec_web/node_modules
     working_dir: "/html"
     tty: true
 
@@ -37,4 +38,5 @@ services:
 
 # named volume
 volumes:
+  node-module-data:
   mysql-data:
