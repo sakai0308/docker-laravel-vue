@@ -7,15 +7,14 @@ $ docker-compose up -d
 $ docker-compose exec vue bash
 
 Docker内
-# vue init webpack ec_web
+# vue create ec_web
 ```
 
 # Vue.jsを起動する手順
 ```
 Docker内
 # cd ec_web
-# npm install –no-bin-links
-# HOST=0.0.0.0 PORT=80 npm run dev
+# HOST=0.0.0.0 PORT=80 yarn serve
 
 自身のPC
 ブラウザ打鍵前に以下のコマンドを叩く
