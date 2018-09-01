@@ -1,7 +1,7 @@
 FROM node:9.11.1
 
-# Vue CLI 3をインストール
-RUN npm install -g @vue/cli
+# vue-cliをインストール
+RUN npm install -g vue-cli
 
-# vue serveをインストール
-RUN npm install -g @vue/cli-service-global
+# webpack-dev-serverをインストール
+RUN npm install -g webpack-dev-server

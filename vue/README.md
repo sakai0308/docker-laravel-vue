@@ -1,9 +1,7 @@
 # docker-machineを起動
 ```
-1. Docker Quickstart Terminalを管理者権限で実行
-   ↑既に起動されている場合は不要
-
-2. 以下のコマンドを叩く（ターミナルを管理者権限で起動すること）
+1. Docker Quickstart Terminalを起動
+2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 80:localhost:80
 ```
 
@@ -25,14 +23,15 @@ $ docker-compose exec vue bash
 # Vue.jsをインストールする手順
 ```
 Docker内
-# vue create ec_web
+# vue init webpack ec_web
 ```
 
 # Vue.jsを起動する手順
 ```
 Docker内
 # cd ec_web
-# HOST=0.0.0.0 PORT=80 yarn serve
+# npm install –no-bin-links
+# HOST=0.0.0.0 PORT=80 npm run dev
 ```
 
 ブラウザで以下URLを打鍵

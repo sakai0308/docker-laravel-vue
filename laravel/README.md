@@ -1,9 +1,7 @@
 # docker-machineを起動
 ```
-1. Docker Quickstart Terminalを管理者権限で実行
-   ↑既に起動されている場合は不要
-
-2. 以下のコマンドを叩く（ターミナルを管理者権限で起動すること）
+1. Docker Quickstart Terminalを起動
+2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 8000:localhost:8000
 ```
 
