@@ -36,3 +36,6 @@ Docker内
 
 ブラウザで以下URLを打鍵
 http://localhost/
+
+# Element UIの導入
+npm install element-ui -s
