@@ -4,7 +4,7 @@ services:
   laravel:
     build: ./laravel
     ports:
-      - 8000:8000
+      - 9000:9000
     volumes:
       - ./laravel/html:/var/www/html
     working_dir: "/var/www/html"
@@ -17,6 +17,7 @@ services:
     build: ./vue
     ports:
       - 80:80
+      - 8000:8000
     volumes:
       - ./vue/html:/html
       - node-module-data:/html/ec_web/node_modules
