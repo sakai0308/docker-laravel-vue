@@ -35,6 +35,6 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
 
-# named volumeでデータを永続化
+# named volume
 volumes:
   mysql-data:
