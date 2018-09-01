@@ -4,4 +4,4 @@ FROM node:9.11.1
 RUN npm install -g @vue/cli
 
 # vue serveをインストール
-RUN yarn global add @vue/cli-service-global
+RUN npm install -g @vue/cli-service-global
