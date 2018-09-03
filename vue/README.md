@@ -30,7 +30,7 @@ Docker内
 ```
 Docker内
 # cd ec_web
-# npm install –no-bin-links
+# npm install --no-bin-links
 # HOST=0.0.0.0 PORT=80 npm run dev
 ```
 
