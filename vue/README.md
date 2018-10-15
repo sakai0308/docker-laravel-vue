@@ -39,3 +39,9 @@ http://localhost/
 
 # Element UIの導入
 npm install element-ui -s
+
+# Vuexの導入
+npm install vuex -s
+
+# axiosの導入
+npm install axios -s
