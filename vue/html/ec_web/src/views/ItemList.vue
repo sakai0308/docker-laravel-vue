@@ -1,11 +1,22 @@
 <template>
   <div class="hello">
     <h1>商品一覧</h1>
-    <ul>
-      <li v-for="itemDetail in itemList" :key="itemDetail.id">
-        {{itemDetail.item_name}}
-      </li>
-    </ul>
+    <el-row>
+      <el-col :span="8" v-for="itemDetail in itemList" :key="itemDetail.id">
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="@/assets/logo.png" class="image">
+          <div style="padding: 14px;">
+            <div>{{itemDetail.item_name}}</div>
+            <div>{{itemDetail.price}}円</div>
+            <div class="bottom clearfix">
+              <router-link :to="{ name: 'ItemDetail', params: { id: itemDetail.id }}">
+                <el-button type="text" class="button">詳細を見る</el-button>
+              </router-link>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
     <router-link to="/order">
       order
     </router-link>

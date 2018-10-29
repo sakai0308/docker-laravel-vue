@@ -13,10 +13,12 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'ItemList',
       component: ItemList
     },
     {
       path: '/item/:id',
+      name: 'ItemDetail',
       component: ItemDetail,
       props: route => ({
         id: Number(route.params.id)
@@ -24,14 +26,17 @@ export default new Router({
     },
     {
       path: '/order',
+      name: 'Order',
       component: Order
     },
     {
       path: '/order/confirm',
+      name: 'OrderConfirm',
       component: OrderConfirm
     },
     {
       path: '/order/done',
+      name: 'OrderDone',
       component: OrderDone
     }
   ]

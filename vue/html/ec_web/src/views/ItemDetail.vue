@@ -1,10 +1,15 @@
 <template>
-  <div class="hello">
-    <h1>商品詳細</h1>
-    <ul>
-      <li>{{ itemDetail.item_name }}</li>
-    </ul>
-  </div>
+  <el-row>
+    <el-col :span="24">
+      <h1>{{ itemDetail.item_name }}</h1>
+      <img src="@/assets/logo.png" class="image">
+      <div>{{itemDetail.price}}円</div>
+      <div>{{itemDetail.description}}</div>
+      <router-link :to="{ name: 'Order' }">
+        <el-button type="text" class="button">購入する</el-button>
+      </router-link>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
