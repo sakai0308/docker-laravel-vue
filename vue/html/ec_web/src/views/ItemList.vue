@@ -17,9 +17,6 @@
         </el-card>
       </el-col>
     </el-row>
-    <router-link to="/order">
-      order
-    </router-link>
   </div>
 </template>
 
@@ -28,9 +25,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(
-      'item', ['itemList']
-    )
+    ...mapGetters('item', ['itemList'])
   },
   mounted () {
     this.$store.dispatch('item/getItemList')

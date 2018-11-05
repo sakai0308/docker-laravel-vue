@@ -1,9 +1,12 @@
-// import axios from 'axios'
+import axios from 'axios'
 
 export default {
   namespaced: true,
   state: {
     orderForm: {
+      id: '',
+      itemId: '',
+      itemNum: '',
       name: '',
       prefecture: '',
       address: ''
@@ -11,31 +14,17 @@ export default {
   },
   getters: {
     orderForm: state => state.orderForm
-  // },
-  // mutations: {
-  //   setItemList (state, { data }) {
-  //     state.itemList = data
-  //   },
-  //   setItemDetail (state, { data }) {
-  //     state.itemDetail = data
-  //   }
-  // },
-  // actions: {
-  //   getItemList ({ commit }) {
-  //     axios.get('http://localhost:8000/api/items/')
-  //       .then(response => {
-  //         if (response.status === 200) {
-  //           commit('setItemList', response)
-  //         }
-  //       })
-  //   },
-  //   getItemDetail ({ commit }, id) {
-  //     axios.get(`http://localhost:8000/api/items/${id}`)
-  //       .then(response => {
-  //         if (response.status === 200) {
-  //           commit('setItemDetail', response)
-  //         }
-  //       })
-  //   }
+  },
+  actions: {
+    postOrder ({ state, commit }) {
+      return axios.post('http://localhost:8000/api/orders/',
+        {
+          itemId: state.orderForm.itemId,
+          itemNum: state.orderForm.itemNum,
+          name: state.orderForm.name,
+          prefecture: state.orderForm.prefecture,
+          address: state.orderForm.address
+        })
+    }
   }
 }

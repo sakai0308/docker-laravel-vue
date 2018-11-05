@@ -16,10 +16,8 @@
           <el-form-item label="ご住所（市区町村）" prop="address">
             <el-input v-model="orderForm.address"></el-input>
           </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="submitForm">購入手続きへ</el-button>
-            <el-button>キャンセル</el-button>
-          </el-form-item>
+          <el-button type="primary" @click="submitForm">購入手続きへ</el-button>
+          <el-button @click="back">キャンセル</el-button>
         </el-form>
       </el-col>
     </el-col>
@@ -46,21 +44,20 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(
-      'order', ['orderForm']
-    )
+    ...mapGetters('order', ['orderForm'])
   },
   methods: {
     submitForm () {
       this.$refs['refOrderForm'].validate((valid) => {
         if (valid) {
-          alert('submit!')
-          console.log(this.orderForm)
+          this.$router.push({ name: 'OrderConfirm' })
         } else {
-          console.log('error submit!!')
           return false
         }
       })
+    },
+    back () {
+      this.$router.go(-1)
     }
   }
 }

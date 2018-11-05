@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Item;
+use App\Order;
 use Log;
 
-class ItemsController extends Controller
+class OrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
-        Log::debug($items);
-        return $items;
+        //
     }
 
     /**
@@ -38,7 +36,16 @@ class ItemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Log::debug($request);
+
+        $order = new Order;
+        $order->item_id = $request->itemId;
+        $order->item_num = $request->itemNum;
+        $order->name = $request->name;
+        $order->prefecture = $request->prefecture;
+        $order->address = $request->address;
+        $order->save();
+        return $order;
     }
 
     /**
@@ -49,10 +56,7 @@ class ItemsController extends Controller
      */
     public function show($id)
     {
-        $item = Item::find($id);
-        Log::debug($id);
-        Log::debug($item);
-        return $item;
+        //
     }
 
     /**
