@@ -40,5 +40,7 @@ http://localhost:8000/
 # Seedを実行し、テストデータ投入
 ```
 Docker内
+# cp -pr .env.example .env
+# php artisan migrate
 # php artisan db:seed
 ```
