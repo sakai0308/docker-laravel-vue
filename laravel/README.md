@@ -30,8 +30,15 @@ Docker内
 ```
 Docker内
 # cd ec_api
+# composer install
 # php artisan serve --host 0.0.0.0
 ```
 
 ブラウザで以下URLを打鍵
 http://localhost:8000/
+
+# Seedを実行し、テストデータ投入
+```
+Docker内
+# php artisan db:seed
+```
