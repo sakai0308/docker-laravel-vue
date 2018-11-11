@@ -4,4 +4,5 @@ FROM node:9.11.1
 RUN npm install -g vue-cli
 
 # webpack-dev-serverをインストール
+RUN npm install -g webpack
 RUN npm install -g webpack-dev-server
