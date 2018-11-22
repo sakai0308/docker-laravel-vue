@@ -12,6 +12,9 @@
       </div>
     </div>
     <router-view/>
+    <div class="footer">
+      <span>&copy;2018</span>
+    </div>
   </div>
 </template>
 
@@ -36,7 +39,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 
 li {
   list-style: none;
@@ -68,5 +70,12 @@ li {
   margin: 5px;
   padding: 0;
   border-bottom: solid 2px white;
+}
+
+.footer {
+  height: 50px;
+  line-height: 50px; 
+  color: white;
+  background: black;
 }
 </style>
