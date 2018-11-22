@@ -52,9 +52,11 @@ li {
   align-items: center;
   padding: 0 30px;
   height: 50px;
+  width: 100%;
   color: white;
   background: black;
-  
+  position: fixed;
+  z-index: 1000; 
 }
 
 .menu {
