@@ -1,6 +1,7 @@
 <template>
+
   <div id="app">
-    <div class="header">
+    <el-header class="header">
       <h1>VUE.JS EC</h1>
       <li>ホーム</li>
       <li>カテゴリー</li>
@@ -10,11 +11,11 @@
         <li></li>
         <li></li>
       </div>
-    </div>
+    </el-header>
     <router-view/>
-    <div class="footer">
+    <el-footer class="footer">
       <span>&copy;2018</span>
-    </div>
+    </el-footer>
   </div>
 </template>
 
@@ -75,8 +76,7 @@ li {
 }
 
 .footer {
-  height: 50px;
-  line-height: 50px; 
+  line-height: 60px; 
   color: white;
   background: black;
 }
