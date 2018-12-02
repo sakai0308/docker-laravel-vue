@@ -4,7 +4,7 @@
     <el-row>
       <el-col :span="8" v-for="itemDetail in itemList" :key="itemDetail.id">
         <el-card :body-style="{ padding: '0px' }">
-          <img :src="'../assets/images/' + image_filename" class="image">
+          <img :src="'../assets/images/' + itemDetail.image_filename" class="image">
           <div style="padding: 14px;">
             <div>{{itemDetail.item_name}}</div>
             <div>{{itemDetail.price}}円</div>
@@ -32,7 +32,7 @@ export default {
   },
       data () {
         return {
-            image_filename: require(itemList.itemDetail.image_filename) 
+            image_filename: require({image_filename}) 
         }
     }
 }
