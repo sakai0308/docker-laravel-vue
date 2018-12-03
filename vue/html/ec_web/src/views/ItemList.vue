@@ -36,7 +36,6 @@ export default {
 <style>
  .hello {
    min-height: 100vh;
-   padding-top: 100px; 
+   padding-top: 100px;
  }
 </style>
-

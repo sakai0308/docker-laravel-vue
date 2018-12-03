@@ -44,7 +44,6 @@ export default {
 li {
   list-style: none;
   padding: 0 30px;
-  
 }
 
 .header {
@@ -57,7 +56,7 @@ li {
   color: white;
   background: black;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .menu {
@@ -76,7 +75,7 @@ li {
 }
 
 .footer {
-  line-height: 60px; 
+  line-height: 60px;
   color: white;
   background: black;
 }

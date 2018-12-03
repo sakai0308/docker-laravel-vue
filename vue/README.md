@@ -3,6 +3,7 @@
 1. Docker Quickstart Terminalを起動
 2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 80:localhost:80
+※localhostを使わず、DockerのIPをたたくようにする
 ```
 
 # docker-composeを起動
