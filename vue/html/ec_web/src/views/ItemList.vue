@@ -7,7 +7,7 @@
           <img :src="'/static/images/' + itemDetail.image_filename" class="image">
           <div>
             <div>{{itemDetail.item_name}}</div>
-            <div>{{itemDetail.price}}円</div>
+            <div>¥{{itemDetail.price}}</div>
             <div class="bottom clearfix">
               <router-link :to="{ name: 'ItemDetail', params: { id: itemDetail.id }}">
                 <el-button type="text" class="button">詳細を見る</el-button>
@@ -36,7 +36,7 @@ export default {
 <style>
  .hello {
    min-height: 100vh;
-   padding-top: 100px;
+   padding-top: 100px; 
  }
 
 .image {
@@ -45,8 +45,6 @@ export default {
   margin: 0%;
 }
 
-
-
 .el-card {
   width: 40%;
   height: 250px;
@@ -54,9 +52,7 @@ export default {
 }
 
 .el-card:hover {
-  width: 40%;
-  height: 250px;
-  margin: 0 auto;
+  
 }
 
 .el-button {  
@@ -68,7 +64,7 @@ export default {
 
 .el-button:hover {  
   border: solid 1px black;
-  padding: 5px;
+  /* padding: 5px;  */
   color: black;
   font-size: 12px;
 }
