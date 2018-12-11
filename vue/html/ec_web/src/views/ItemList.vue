@@ -45,16 +45,18 @@ export default {
   margin: 0%;
 }
 
-.el-card {
+.el-card.is-always-shadow {
+
   width: 40%;
   height: 250px;
-  margin: 0 auto;
+  margin: 1px auto;
+  border: none; 
+  box-shadow: none;
 }
 
 .el-card:hover {
-  
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 }
-
 .el-button {  
   border: solid 1px black;
   padding: 5px;
