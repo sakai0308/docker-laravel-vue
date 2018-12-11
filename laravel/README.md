@@ -3,6 +3,7 @@
 1. Docker Quickstart Terminalを起動
 2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 8000:localhost:8000
+※localhostを使わず、DockerのIPをたたくようにする
 ```
 
 # docker-composeを起動
@@ -40,6 +41,7 @@ http://localhost:8000/
 # Seedを実行し、テストデータ投入
 ```
 Docker内
+# php artisan key:generate
 # cp -pr .env.example .env
 # php artisan migrate
 # php artisan db:seed
