@@ -5,9 +5,9 @@
     </el-col>
     <el-col :span="12">
       <el-card>
-        <h1>{{ itemDetail.item_name }}</h1>
-        <div>{{ itemDetail.price }}円</div>
-        <p>{{ itemDetail.description }}</p>
+        <h1 class="imtem_name">{{ itemDetail.item_name }}</h1>
+        <p class="price">{{ itemDetail.price }}円</p>
+        <p class="description">{{ itemDetail.description }}</p>
         <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
           <el-form-item label="購入個数" prop="itemNum">
             <el-input v-model="orderForm.itemNum"></el-input>
@@ -65,10 +65,6 @@ export default {
 .el-col {
   padding: 10%;
   text-align: center;
-}
-
-.el-card {
-  height: 50vh;
 }
 
 .image {

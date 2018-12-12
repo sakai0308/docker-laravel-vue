@@ -36,7 +36,7 @@ export default {
 <style>
  .hello {
    min-height: 95vh;
-   padding-top: 100px; 
+   padding-top: 100px;
  }
 
 .image {
@@ -49,7 +49,7 @@ export default {
   width: 40%;
   height: 250px;
   margin: 1px auto;
-  border: none; 
+  border: none;
   box-shadow: none;
 }
 
@@ -57,17 +57,16 @@ export default {
   box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 }
 
-.el-button {  
+.el-button {
   border: solid 1px black;
   padding: 5px;
   color: black;
   font-size: 12px;
 }
 
-.el-button:hover {  
+.el-button:hover {
   border: solid 1px black;
   color: black;
   font-size: 12px;
 }
- 
 </style>

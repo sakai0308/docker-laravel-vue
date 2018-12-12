@@ -1,6 +1,7 @@
 <template>
   <el-row>
     <el-col :span="24">
+      <el-card>
       <h1>ご購入手続き</h1>
       <el-col :span="22" :offset="1">
         <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
@@ -20,6 +21,7 @@
           <el-button @click="back">キャンセル</el-button>
         </el-form>
       </el-col>
+      </el-card>
     </el-col>
   </el-row>
 </template>
