@@ -1,18 +1,20 @@
 <template>
-  <el-row>
-    <el-col :span="24">
-      <h1>{{ itemDetail.item_name }}</h1>
-      <img src="@/assets/logo.png" class="image">
-      <div>{{ itemDetail.price }}円</div>
-      <div>{{ itemDetail.description }}</div>
-      <el-col :span="18" :offset="3">
+  <el-row type="flex" justify="end">
+    <el-col :span="12">
+      <img :src="'/static/images/' + itemDetail.image_filename" class="image">
+    </el-col>
+    <el-col :span="12">
+      <el-card>
+        <h1>{{ itemDetail.item_name }}</h1>
+        <div>{{ itemDetail.price }}円</div>
+        <p>{{ itemDetail.description }}</p>
         <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
           <el-form-item label="購入個数" prop="itemNum">
             <el-input v-model="orderForm.itemNum"></el-input>
           </el-form-item>
-          <el-button type="primary" @click="submitForm">購入する</el-button>
+          <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
         </el-form>
-      </el-col>
+      </el-card>
     </el-col>
   </el-row>
 </template>
@@ -54,3 +56,23 @@ export default {
   }
 }
 </script>
+
+<style>
+.el-row {
+  min-height: 95vh;
+}
+
+.el-col {
+  padding: 10%;
+  text-align: center;
+}
+
+.el-card {
+  height: 50vh;
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+}
+</style>

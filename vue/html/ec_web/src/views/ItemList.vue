@@ -35,7 +35,7 @@ export default {
 
 <style>
  .hello {
-   min-height: 100vh;
+   min-height: 95vh;
    padding-top: 100px; 
  }
 
@@ -46,7 +46,6 @@ export default {
 }
 
 .el-card.is-always-shadow {
-
   width: 40%;
   height: 250px;
   margin: 1px auto;
@@ -57,6 +56,7 @@ export default {
 .el-card:hover {
   box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 }
+
 .el-button {  
   border: solid 1px black;
   padding: 5px;
@@ -66,7 +66,6 @@ export default {
 
 .el-button:hover {  
   border: solid 1px black;
-  /* padding: 5px;  */
   color: black;
   font-size: 12px;
 }
