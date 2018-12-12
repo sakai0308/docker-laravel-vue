@@ -1,6 +1,7 @@
 <template>
   <el-row>
     <el-col :span="24">
+      <el-card>
       <h1>ご注文内容の確認</h1>
       <h2>お届け先</h2>
       <el-row>
@@ -46,6 +47,7 @@
       </el-row>
       <el-button type="primary" @click="executeOrder">購入を確定する</el-button>
       <el-button @click="back">戻る</el-button>
+      </el-card>
     </el-col>
   </el-row>
 </template>
