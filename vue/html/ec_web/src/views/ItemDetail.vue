@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-row {
   min-height: 95vh;
 }

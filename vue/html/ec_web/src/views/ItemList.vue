@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
  .hello {
    min-height: 95vh;
    padding-top: 100px;
