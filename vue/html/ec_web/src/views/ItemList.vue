@@ -69,4 +69,14 @@ export default {
   color: black;
   font-size: 12px;
 }
+
+@media screen and (max-width:480px){
+  .el-col-8 {
+    width: 100%;
+  }
+
+  .el-card.is-always-shadow {
+    width: 60%;
+  }
+}
 </style>

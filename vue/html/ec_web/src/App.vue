@@ -3,9 +3,11 @@
   <div id="app">
     <el-header class="header">
       <h1>VUE.JS EC</h1>
-      <li>ホーム</li>
-      <li>カテゴリー</li>
-      <li>カート</li>
+      <ul class="menu_list">
+        <li>ホーム</li>
+        <li>カテゴリー</li>
+        <li>カート</li>
+      </ul>
       <div class="menu">
         <li></li>
         <li></li>
@@ -39,6 +41,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+ul {
+  display: flex;
 }
 
 li {
@@ -78,5 +84,19 @@ li {
   line-height: 60px;
   color: white;
   background: black;
+}
+
+@media screen and (max-width:480px){
+  ul li {
+    display: none;
+  }
+
+  h1 {
+    flex-basis: 200px;
+  }
+
+  .menu {
+    flex-basis: 50px;
+  }
 }
 </style>

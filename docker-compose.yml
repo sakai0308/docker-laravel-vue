@@ -7,7 +7,7 @@ services:
       - 8000:8000
     volumes:
       - ./laravel/html:/var/www/html
-    working_dir: "/var/www/html"
+    working_dir: "/var/www/html/ec_api"
     tty: true
     depends_on:
       - mysql
@@ -19,7 +19,7 @@ services:
       - 80:80
     volumes:
       - ./vue/html:/html
-    working_dir: "/html"
+    working_dir: "/html/ec_web"
     tty: true
 
   # MySQL
@@ -34,6 +34,7 @@ services:
         MYSQL_DATABASE: sample_db
     volumes:
       - mysql-data:/var/lib/mysql
+    
 
 # named volume
 volumes:
