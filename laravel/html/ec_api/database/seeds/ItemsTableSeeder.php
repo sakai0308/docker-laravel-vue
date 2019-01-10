@@ -15,38 +15,38 @@ class ItemsTableSeeder extends Seeder
         DB::table('items')->insert([
             [
                 'item_name' => 'Tシャツ',
-                'price' => 3000,
-                'description' => 'Tシャツです。',
+                'price' => 2980,
+                'description' => 'ラウンドネックのTシャツです。',
                 'image_filename' => 't-shirt.png'
             ],
             [
                 'item_name' => 'Yシャツ',
-                'price' => 4000,
-                'description' => 'Yシャツです。',
+                'price' => 3980,
+                'description' => '長袖のYシャツです。',
                 'image_filename' => 'y-shirt.png'
             ],
             [
                 'item_name' => 'ショートパンツ',
-                'price' => 1500,
-                'description' => 'ショートパンツです。',
+                'price' => 4980,
+                'description' => 'ショート丈のパンツです。',
                 'image_filename' => 's-pants.png'
             ],
                         [
                 'item_name' => 'ロングパンツ',
-                'price' => 1500,
-                'description' => 'ロングパンツです。',
+                'price' => 7980,
+                'description' => 'ロング丈のパンツです。',
                 'image_filename' => 'l-pants.png'
             ],
             [
                 'item_name' => 'ハット',
-                'price' => 1000,
-                'description' => 'ハットです。',
+                'price' => 3980,
+                'description' => 'フリーサイズのハットです。',
                 'image_filename' => 'hat.png'
             ],
             [
                 'item_name' => 'スニーカー',
-                'price' => 5500,
-                'description' => 'スニーカーです。',
+                'price' => 7980,
+                'description' => 'ローカットのスニーカーです。',
                 'image_filename' => 'sneakers.png'
             ],
         ]);

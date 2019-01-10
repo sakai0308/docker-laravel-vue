@@ -1,20 +1,25 @@
 <template>
-  <el-row type="flex" justify="end">
-    <el-col :span="12">
-      <img :src="'/static/images/' + itemDetail.image_filename" class="image">
-    </el-col>
-    <el-col :span="12">
-      <el-card>
-        <h1 class="imtem_name">{{ itemDetail.item_name }}</h1>
-        <p class="price">{{ itemDetail.price }}円</p>
-        <p class="description">{{ itemDetail.description }}</p>
-        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
-          <el-form-item label="購入個数" prop="itemNum">
-            <el-input v-model="orderForm.itemNum"></el-input>
-          </el-form-item>
-          <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
-        </el-form>
-      </el-card>
+  <el-row>
+    <el-col :span="20" :offset="2">
+      <el-col :xs="24" :sm="12">
+        <img :src="'/static/images/' + itemDetail.image_filename" class="image">
+      </el-col>
+      <el-col :xs="24" :sm="12">
+        <el-card>
+          <h1 class="imtem_name">{{ itemDetail.item_name }}</h1>
+          <p class="description">
+            <div class="description-label">商品説明</div>
+            <div>{{ itemDetail.description }}</div>
+          </p>
+          <p class="price">¥ {{ itemDetail.price.toLocaleString() }}</p>
+          <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
+            <el-form-item label="数量" prop="itemNum">
+              <el-input v-model="orderForm.itemNum"></el-input>
+            </el-form-item>
+            <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
+          </el-form>
+        </el-card>
+      </el-col>
     </el-col>
   </el-row>
 </template>
@@ -30,7 +35,7 @@ export default {
     return {
       rulesOrderForm: {
         itemNum: [
-          { required: true, message: '購入個数を入力してください', trigger: 'blur' }
+          { required: true, message: '数量を入力してください', trigger: 'blur' }
         ]
       }
     }
@@ -58,17 +63,21 @@ export default {
 </script>
 
 <style scoped>
-.el-row {
-  min-height: 95vh;
-}
-
-.el-col {
-  padding: 10%;
-  text-align: center;
-}
-
 .image {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+}
+
+.price {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.description-label {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.el-form {
+  text-align: center;
 }
 </style>

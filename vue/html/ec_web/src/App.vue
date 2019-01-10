@@ -14,7 +14,9 @@
         <li></li>
       </div>
     </el-header>
-    <router-view/>
+    <div class="content">
+      <router-view/>
+    </div>
     <el-footer class="footer">
       <span>&copy;2018</span>
     </el-footer>
@@ -35,11 +37,11 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
@@ -80,8 +82,15 @@ li {
   border-bottom: solid 2px white;
 }
 
+.content {
+  min-height: 95vh;
+  padding-top: 100px;
+}
+
 .footer {
-  line-height: 60px;
+  margin-top: 20px;
+  line-height: 40px;
+  text-align: center;
   color: white;
   background: black;
 }

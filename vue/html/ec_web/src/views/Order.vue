@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="24">
+    <el-col :span="20" :offset="2">
       <el-card>
       <h1>ご購入手続き</h1>
       <el-col :span="22" :offset="1">
