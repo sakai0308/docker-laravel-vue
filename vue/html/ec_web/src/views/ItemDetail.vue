@@ -6,11 +6,11 @@
       </el-col>
       <el-col :xs="24" :sm="12">
         <el-card>
-          <h1 class="imtem_name">{{ itemDetail.item_name }}</h1>
-          <p class="description">
-            <div class="description-label">商品説明</div>
-            <div>{{ itemDetail.description }}</div>
-          </p>
+          <h3 class="imtem_name">{{ itemDetail.item_name }}</h3>
+          <div class="description">
+            <h4 class="description-label">商品説明</h4>
+            <p>{{ itemDetail.description }}</p>
+          </div>
           <p class="price">¥ {{ itemDetail.price.toLocaleString() }}</p>
           <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
             <el-form-item label="数量" prop="itemNum">
