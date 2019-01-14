@@ -2,7 +2,9 @@
 
   <div id="app">
     <el-header class="header">
+      <router-link :to="{ name: 'ItemList' }">
       <h1>VUE.JS EC</h1>
+      </router-link>
       <ul class="menu_list">
         <li>ホーム</li>
         <li>カテゴリー</li>
@@ -65,6 +67,11 @@ li {
   background: black;
   position: fixed;
   z-index: 1000;
+}
+
+.router-link-active {
+  text-decoration: none;
+  color: white;
 }
 
 .menu {
