@@ -1,29 +1,29 @@
 <template>
   <el-row>
     <el-col :gutter="20">
-        <el-col :span="12" :offset="6">
-          <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
-            <h3 class="order-title">ご購入手続き</h3>
-            <el-form-item label="お名前" prop="name">
-              <el-input v-model="orderForm.name"></el-input>
-            </el-form-item>
-            <el-form-item label="ご住所（都道府県）" prop="prefecture">
-              <el-select v-model="orderForm.prefecture" placeholder="都道府県を選択してください">
-                <el-option
-                  v-for="prefecture in prefectures"
-                  :key="prefecture.value"
-                  :label="prefecture.label"
-                  :value="prefecture.value">
-                </el-option>
-              </el-select>
-            </el-form-item>
-            <el-form-item label="ご住所（市区町村）" prop="address">
-              <el-input v-model="orderForm.address"></el-input>
-            </el-form-item>
-            <el-button type="info" @click="submitForm">注文内容を確認する</el-button>
-            <el-button @click="back">キャンセル</el-button>
-          </el-form>
-        </el-col>
+      <el-col :span="12" :offset="6">
+        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
+          <h3 class="order-title">ご購入手続き</h3>
+          <el-form-item label="お名前" prop="name">
+            <el-input v-model="orderForm.name"></el-input>
+          </el-form-item>
+          <el-form-item label="ご住所（都道府県）" prop="prefecture">
+            <el-select v-model="orderForm.prefecture" placeholder="都道府県を選択してください">
+              <el-option
+                v-for="prefecture in prefectures"
+                :key="prefecture.value"
+                :label="prefecture.label"
+                :value="prefecture.value">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="ご住所（市区町村）" prop="address">
+            <el-input v-model="orderForm.address"></el-input>
+          </el-form-item>
+          <el-button type="info" @click="submitForm">注文内容を確認する</el-button>
+          <el-button @click="back">キャンセル</el-button>
+        </el-form>
+      </el-col>
     </el-col>
   </el-row>
 </template>
