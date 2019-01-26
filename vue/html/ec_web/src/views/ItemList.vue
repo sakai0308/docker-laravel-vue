@@ -35,11 +35,9 @@ export default {
 .image {
   width: 100%;
 }
-
 .item {
   text-align: center;
 }
-
 .price {
   font-size: 1.2em;
   font-weight: 700;

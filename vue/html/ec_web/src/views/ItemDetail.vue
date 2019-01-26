@@ -6,7 +6,7 @@
       </el-col>
       <el-col :xs="24" :sm="12">
         <el-card>
-          <h3 class="imtem_name">{{ itemDetail.item_name }}</h3>
+          <h3>{{ itemDetail.item_name }}</h3>
           <div class="description">
             <h4 class="description-label">商品説明</h4>
             <p>{{ itemDetail.description }}</p>
@@ -52,6 +52,7 @@ export default {
       this.$refs['refOrderForm'].validate((valid) => {
         if (valid) {
           this.orderForm.itemId = this.id
+          this.orderForm.itemName = this.itemDetail.item_name
           this.$router.push({ name: 'Order' })
         } else {
           return false
@@ -66,17 +67,14 @@ export default {
 .image {
   width: 100%;
 }
-
 .price {
   font-size: 1.4em;
   font-weight: 700;
 }
-
 .description-label {
   font-size: 1.2em;
   font-weight: 700;
 }
-
 .el-form {
   text-align: center;
 }
