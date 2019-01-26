@@ -35,10 +35,10 @@
           <h4>ご注文内容</h4>
           <el-row>
             <el-col :span="7" :offset="1">
-              商品ID
+             商品名
             </el-col>
             <el-col :span="14" :offset="2">
-              {{ orderForm.itemId }}
+              {{ orderForm.item_name}}
             </el-col>
           </el-row>
           <el-row>

@@ -47,10 +47,6 @@ export default {
   color: #2c3e50;
 }
 
-ul {
-  display: flex;
-}
-
 li {
   list-style: none;
   padding: 0 30px;
@@ -87,6 +83,10 @@ li {
   margin: 5px;
   padding: 0;
   border-bottom: solid 2px white;
+}
+
+.menu_list {
+  display: flex;
 }
 
 .content {
