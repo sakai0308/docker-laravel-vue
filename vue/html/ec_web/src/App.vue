@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'ItemList' }">
       <h1>VUE.JS EC</h1>
       </router-link>
-      <ul class="menu_list">
+      <ul class="menu-list">
         <li>ホーム</li>
         <li>カテゴリー</li>
         <li>カート</li>
@@ -86,7 +86,7 @@ li {
   border-bottom: solid 2px white;
 }
 
-.menu_list {
+.menu-list {
   display: flex;
 }
 
@@ -108,7 +108,7 @@ li {
     flex-basis: 200px;
   }
 
-  .menu_list {
+  .menu-list {
     display: none;
   }
 

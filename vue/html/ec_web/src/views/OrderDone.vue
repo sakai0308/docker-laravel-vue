@@ -3,7 +3,7 @@
     <el-col :span="12" :offset="6">
       <h3 class="order-done-title">ご注文が確定しました</h3>
       <p>下記の注文番号をお控えください。</p>
-      <p>注文番号 :{{ orderForm.id }}</p>
+      <p class="order-number">注文番号 :<span>{{ orderForm.id }}</span></p>
       <p>ご利用ありがとうございました。</p>
       <router-link :to="{ name: 'ItemList' }">
         <el-button type="round">トップページへ戻る</el-button>
@@ -31,5 +31,9 @@ export default {
 }
 .el-col .el-button {
   margin-top: 60px;
+}
+
+.order-number span {
+  color: red;
 }
 </style>
