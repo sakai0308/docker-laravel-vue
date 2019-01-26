@@ -63,7 +63,7 @@ export default {
       }, {
         value: '沖縄県',
         label: '沖縄県'
-      }],
+      }]
     }
   },
   computed: {

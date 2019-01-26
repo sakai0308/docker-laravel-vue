@@ -1,5 +1,4 @@
 <template>
-
   <div id="app">
     <el-header class="header">
       <router-link :to="{ name: 'ItemList' }">
@@ -39,19 +38,16 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
 li {
   list-style: none;
   padding: 0 30px;
 }
-
 .header {
   display: flex;
   justify-content: center;
@@ -64,19 +60,16 @@ li {
   position: fixed;
   z-index: 1000;
 }
-
 .router-link-active {
   text-decoration: none;
   color: white;
 }
-
 .menu {
   width: 40px;
   height: 40px;
   margin: 5px 0;
   display: none;
 }
-
 .menu li {
   color: white;
   width: 30px;
@@ -85,16 +78,13 @@ li {
   padding: 0;
   border-bottom: solid 2px white;
 }
-
 .menu-list {
   display: flex;
 }
-
 .content {
   min-height: 95vh;
   padding-top: 100px;
 }
-
 .footer {
   margin-top: 20px;
   line-height: 40px;
@@ -107,11 +97,9 @@ li {
   h1 {
     flex-basis: 200px;
   }
-
   .menu-list {
     display: none;
   }
-
   .menu {
     flex-basis: 50px;
     display: block;
