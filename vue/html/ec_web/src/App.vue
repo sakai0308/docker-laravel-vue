@@ -74,6 +74,7 @@ li {
   width: 40px;
   height: 40px;
   margin: 5px 0;
+  display: none;
 }
 
 .menu li {
@@ -103,16 +104,17 @@ li {
 }
 
 @media screen and (max-width:480px){
-  ul li {
-    display: none;
-  }
-
   h1 {
     flex-basis: 200px;
   }
 
+  .menu_list {
+    display: none;
+  }
+
   .menu {
     flex-basis: 50px;
+    display: block;
   }
 }
 </style>
