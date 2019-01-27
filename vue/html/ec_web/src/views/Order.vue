@@ -2,7 +2,7 @@
   <el-row>
     <el-col :gutter="20">
       <el-col :span="12" :offset="6">
-        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="160px">
+        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="">
           <h3 class="order-title">ご購入手続き</h3>
           <el-form-item label="お名前" prop="name">
             <el-input v-model="orderForm.name"></el-input>
@@ -95,5 +95,14 @@ export default {
 }
 .el-select {
   width: 100%;
+}
+
+@media screen and (max-width:480px){
+  .el-col-12 {
+    width: 100%;
+    padding: 0 10%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 </style>
