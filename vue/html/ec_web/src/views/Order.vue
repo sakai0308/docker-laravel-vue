@@ -20,8 +20,10 @@
           <el-form-item label="ご住所（市区町村）" prop="address">
             <el-input v-model="orderForm.address"></el-input>
           </el-form-item>
-          <el-button type="info" @click="submitForm">注文内容を確認する</el-button>
-          <el-button @click="back">キャンセル</el-button>
+          <div class="order-buttons">
+            <el-button type="info" @click="submitForm">注文内容を確認する</el-button>
+            <el-button @click="back">キャンセル</el-button>
+          </div>
         </el-form>
       </el-col>
     </el-col>
@@ -103,6 +105,11 @@ export default {
     padding: 0 10%;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .order-buttons .el-button{
+  width: 100%;
+  margin: 20px 0 5px;
   }
 }
 </style>

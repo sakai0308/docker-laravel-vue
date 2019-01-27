@@ -89,4 +89,11 @@ export default {
 .el-button {
   margin-top: 22px;
 }
+
+@media screen and (max-width:480px){
+  .order-confirm-buttons .el-button{
+  width: 100%;
+  margin: 20px 0 5px;
+  }
+}
 </style>
