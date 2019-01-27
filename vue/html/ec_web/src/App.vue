@@ -2,7 +2,7 @@
   <div id="app">
     <el-header class="header">
       <router-link :to="{ name: 'ItemList' }">
-      <h1>VUE.JS EC</h1>
+      <h1 class="header-title">VUE.JS EC</h1>
       </router-link>
       <ul class="menu-list">
         <li>ホーム</li>
@@ -50,9 +50,9 @@ li {
 }
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 15%;
   height: 50px;
   width: 100%;
   color: white;
@@ -60,6 +60,10 @@ li {
   position: fixed;
   z-index: 1000;
 }
+.header >:first-child {
+  margin-right: auto;
+}
+
 .router-link-active {
   text-decoration: none;
   color: white;
