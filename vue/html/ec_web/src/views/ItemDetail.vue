@@ -5,7 +5,6 @@
         <img :src="'/static/images/' + itemDetail.image_filename" class="image">
       </el-col>
       <el-col :xs="24" :sm="12">
-        <el-card>
           <h3>{{ itemDetail.item_name }}</h3>
           <div class="description">
             <h4 class="description-label">商品説明</h4>
@@ -18,7 +17,6 @@
             </el-form-item>
             <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
           </el-form>
-        </el-card>
       </el-col>
     </el-col>
   </el-row>

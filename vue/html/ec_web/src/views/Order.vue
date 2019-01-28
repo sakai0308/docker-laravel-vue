@@ -2,7 +2,7 @@
   <el-row>
     <el-col :gutter="20">
       <el-col :span="12" :offset="6">
-        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm" label-width="">
+        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
           <h3 class="order-title">ご購入手続き</h3>
           <el-form-item label="お名前" prop="name">
             <el-input v-model="orderForm.name"></el-input>
@@ -17,7 +17,7 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="ご住所（市区町村）" prop="address">
+          <el-form-item label="ご住所 (市区町村)" prop="address">
             <el-input v-model="orderForm.address"></el-input>
           </el-form-item>
           <div class="order-buttons">
@@ -87,7 +87,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .order-title {
   text-align: center;
   margin: 0 0 30px;
@@ -99,17 +99,16 @@ export default {
   width: 100%;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
   .el-col-12 {
     width: 100%;
     padding: 0 10%;
     margin: 0 auto;
     text-align: center;
   }
-
   .order-buttons .el-button{
-  width: 100%;
-  margin: 20px 0 5px;
+    width: 100%;
+    margin: 20px 0 5px;
   }
 }
 </style>

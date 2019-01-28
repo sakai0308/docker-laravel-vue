@@ -97,15 +97,11 @@ li {
   background: black;
 }
 
-@media screen and (max-width:480px){
-  h1 {
-    flex-basis: 200px;
-  }
+@media screen and (max-width:768px){
   .menu-list {
     display: none;
   }
   .menu {
-    flex-basis: 50px;
     display: block;
   }
 }

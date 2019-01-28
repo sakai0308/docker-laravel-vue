@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="12" :offset="6">
+    <el-col :span="12" :offset="6" class="order-confirm">
       <h3 class="order-confirm-title">ご注文内容の確認</h3>
       <h4 class="order-confirm-subtitle">お届け先</h4>
       <el-row>
@@ -75,7 +75,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .order-confirm-title {
   text-align: center;
   margin: 0 0 30px;
@@ -90,10 +90,15 @@ export default {
   margin-top: 22px;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
+  .order-confirm {
+    width: 100%;
+    padding: 10%;
+    margin: 0 auto;
+  } 
   .order-confirm-buttons .el-button{
-  width: 100%;
-  margin: 20px 0 5px;
+    width: 100%;
+    margin: 20px 0 5px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="20" :offset="2">
-      <h1>商品一覧</h1>
+      <h1 class="item-list-title">商品一覧</h1>
       <el-col :xs="24" :sm="8" v-for="itemDetail in itemList" :key="itemDetail.id">
         <div class="item">
           <img :src="'/static/images/' + itemDetail.image_filename" class="image">
@@ -41,5 +41,11 @@ export default {
 .price {
   font-size: 1.2em;
   font-weight: 700;
+}
+
+@media screen and (max-width:768px){
+  .item-list-title {
+    text-align: center;
+  } 
 }
 </style>

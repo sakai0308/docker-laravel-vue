@@ -21,7 +21,8 @@ export default {
   }
 }
 </script>
-<style>
+
+<style scoped>
 .order-done {
   text-align: center;
 }
