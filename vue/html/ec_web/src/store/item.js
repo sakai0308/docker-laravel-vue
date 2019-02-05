@@ -29,7 +29,7 @@ export default {
   },
   actions: {
     getItemList ({ commit }) {
-      axios.get('http://localhost:8000/api/items/')
+      axios.get('http://192.168.99.100:8000/api/items/')
         .then(response => {
           if (response.status === 200) {
             commit('setItemList', response)
@@ -37,7 +37,7 @@ export default {
         })
     },
     getItemDetail ({ commit }, id) {
-      axios.get(`http://localhost:8000/api/items/${id}`)
+      axios.get(`http://192.168.99.100:8000/api/items/${id}`)
         .then(response => {
           if (response.status === 200) {
             commit('setItemDetail', response)

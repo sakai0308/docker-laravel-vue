@@ -3,7 +3,7 @@
 1. Docker Quickstart Terminalを起動
 2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 8000:localhost:8000
-※localhostを使わず、DockerのIPをたたくようにする
+※localhostを使わず、DockerのIP(192.168.99.100)をたたくようにする
 ```
 
 # docker-composeを起動
@@ -36,7 +36,7 @@ Docker内
 ```
 
 ブラウザで以下URLを打鍵
-http://localhost:8000/
+http://192.168.99.100:8000/
 
 # Seedを実行し、テストデータ投入
 ```
