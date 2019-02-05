@@ -46,6 +46,6 @@ export default {
 @media screen and (max-width:768px){
   .item-list-title {
     text-align: center;
-  } 
+  }
 }
 </style>

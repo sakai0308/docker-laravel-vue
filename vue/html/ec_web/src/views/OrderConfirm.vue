@@ -95,7 +95,7 @@ export default {
     width: 100%;
     padding: 10%;
     margin: 0 auto;
-  } 
+  }
   .order-confirm-buttons .el-button{
     width: 100%;
     margin: 20px 0 5px;
