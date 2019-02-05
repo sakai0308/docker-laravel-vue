@@ -3,12 +3,13 @@
 1. Docker Quickstart Terminalを起動
 2. 以下のコマンドを叩く
 $ docker-machine ssh default -L 80:localhost:80
-※localhostを使わず、DockerのIP(192.168.99.100)をたたくようにする
+※localhostを使わず、DockerのIP(192.168.99.100)をたたくようにした為、上記のコマンドは不要
 ```
 
 # docker-composeを起動
 ```
 自身のPC
+$ cd /c/Users/<ユーザー名>/Documents/docker-laravel-vue/
 $ docker-compose build
   ↑一度だけ実行するコマンド
 $ docker-compose up -d
@@ -18,6 +19,7 @@ $ docker-compose up -d
 # Docker内のVue.jsサーバに接続
 ```
 自身のPC
+$ cd /c/Users/<ユーザー名>/Documents/docker-laravel-vue/
 $ docker-compose exec vue bash
 ```
 
