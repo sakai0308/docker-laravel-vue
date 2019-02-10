@@ -2,7 +2,7 @@
   <el-row>
     <el-col :span="20" :offset="2">
       <h2 class="sub-title">商品一覧</h2>
-      <template v-if="itemList.length">
+      <template v-if="itemList.length > 0">
         <el-row>
           <el-col :xs="24" :sm="8" v-for="itemDetail in itemList" :key="itemDetail.id">
             <div class="text-center">

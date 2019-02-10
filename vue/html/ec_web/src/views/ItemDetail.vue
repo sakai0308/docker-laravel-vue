@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :span="20" :offset="2">
-      <template v-if="Object.keys(itemDetail).length">
+      <template v-if="Object.keys(itemDetail).length > 0">
         <el-row>
           <el-col :xs="24" :sm="12">
             <img class="w-100" :src="'/static/images/' + itemDetail.image_filename">
