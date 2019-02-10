@@ -1,11 +1,14 @@
 import axios from 'axios'
 
 /*
-// 商品リストの配列
+// TODO: 商品リストの配列(Laravel使わない時は一旦これで)
 const database = [
-  { id: 1, name: '商品A', price: 100, content: '商品A詳細' },
-  { id: 2, name: '商品B', price: 200, content: '商品B詳細' },
-  { id: 3, name: '商品C', price: 300, content: '商品C詳細' }
+  { id: 1, item_name: 'Tシャツ', price: 2980, description: 'ラウンドネックのTシャツです', image_filename: 't-shirt.png' },
+  { id: 2, item_name: 'Yシャツ', price: 3980, description: '長袖のYシャツです。', image_filename: 'y-shirt.png' },
+  { id: 3, item_name: 'ショートパンツ', price: 4980, description: 'ショート丈のパンツです。', image_filename: 's-pants.png' },
+  { id: 4, item_name: 'ロングパンツ', price: 7980, description: 'ロング丈のパンツです。', image_filename: 'l-pants.png' },
+  { id: 5, item_name: 'ハット', price: 3980, description: 'フリーサイズのハットです', image_filename: 'hat.png' },
+  { id: 6, item_name: 'スニーカー', price: 7980, description: 'ローカットのスニーカーです。', image_filename: 'sneakers.png' }
 ]
 */
 
@@ -29,7 +32,7 @@ export default {
   },
   actions: {
     getItemList ({ commit }) {
-      axios.get('http://192.168.99.100:8000/api/items/')
+      axios.get(`${process.env.API_ENDPOINT}/api/items/`)
         .then(response => {
           if (response.status === 200) {
             commit('setItemList', response)
@@ -37,7 +40,7 @@ export default {
         })
     },
     getItemDetail ({ commit }, id) {
-      axios.get(`http://192.168.99.100:8000/api/items/${id}`)
+      axios.get(`${process.env.API_ENDPOINT}/api/items/${id}`)
         .then(response => {
           if (response.status === 200) {
             commit('setItemDetail', response)
