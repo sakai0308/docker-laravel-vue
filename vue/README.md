@@ -43,6 +43,8 @@ http://192.168.99.100/
 # Element UIの導入
 npm install element-ui -s
 
+※Elemet UIの公式マニュアル：http://element.eleme.io/#/en-US
+
 # Vuexの導入
 npm install vuex -s
 

@@ -19,7 +19,7 @@
         <el-form-item label="ご住所 (市区町村)" prop="address">
           <el-input v-model="orderForm.address"></el-input>
         </el-form-item>
-        <div class="order-buttons">
+        <section class="order-buttons">
           <el-row :gutter="20">
             <el-col :xs="24" :sm="12">
               <el-button class="w-100" type="info" @click="submitForm">注文内容を確認する</el-button>
@@ -28,7 +28,7 @@
               <el-button class="w-100" @click="back">キャンセル</el-button>
             </el-col>
           </el-row>
-        </div>
+        </section>
       </el-form>
     </el-col>
   </el-row>

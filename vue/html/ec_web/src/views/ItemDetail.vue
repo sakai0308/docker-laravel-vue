@@ -2,23 +2,25 @@
   <el-row>
     <el-col :span="20" :offset="2">
       <template v-if="Object.keys(itemDetail).length">
-        <el-col :xs="24" :sm="12">
-          <img class="w-100" :src="'/static/images/' + itemDetail.image_filename">
-        </el-col>
-        <el-col :xs="24" :sm="12">
-          <h3>{{ itemDetail.item_name }}</h3>
-          <section>
-            <h4>商品説明</h4>
-            <p>{{ itemDetail.description }}</p>
-            <p class="item-price">¥ {{ itemDetail.price.toLocaleString() }}</p>
-          </section>
-          <el-form class="text-center" ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
-            <el-form-item label="数量" prop="itemNum">
-              <el-input v-model="orderForm.itemNum"></el-input>
-            </el-form-item>
-            <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
-          </el-form>
-        </el-col>
+        <el-row>
+          <el-col :xs="24" :sm="12">
+            <img class="w-100" :src="'/static/images/' + itemDetail.image_filename">
+          </el-col>
+          <el-col :xs="24" :sm="12">
+            <h3>{{ itemDetail.item_name }}</h3>
+            <section>
+              <h4>商品説明</h4>
+              <p>{{ itemDetail.description }}</p>
+              <p class="item-price">¥ {{ itemDetail.price.toLocaleString() }}</p>
+            </section>
+            <el-form class="text-center" ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
+              <el-form-item label="数量" prop="itemNum">
+                <el-input v-model="orderForm.itemNum"></el-input>
+              </el-form-item>
+              <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
+            </el-form>
+          </el-col>
+        </el-row>
       </template>
       <template v-else>
         Loading...
