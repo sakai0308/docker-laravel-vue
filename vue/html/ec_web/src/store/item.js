@@ -28,6 +28,9 @@ export default {
     },
     setItemDetail (state, { data }) {
       state.itemDetail = data
+    },
+    resetItemDetail (state) {
+      state.itemDetail = {}
     }
   },
   actions: {
@@ -40,6 +43,7 @@ export default {
         })
     },
     getItemDetail ({ commit }, id) {
+      commit('resetItemDetail') // 事前にアイテム詳細データを初期化する
       axios.get(`${process.env.API_ENDPOINT}/api/items/${id}`)
         .then(response => {
           if (response.status === 200) {

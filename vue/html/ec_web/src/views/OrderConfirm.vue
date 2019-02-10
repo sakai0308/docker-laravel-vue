@@ -1,53 +1,63 @@
 <template>
-  <el-row>
-    <el-col :span="12" :offset="6" class="order-confirm">
-      <h3 class="order-confirm-title">ご注文内容の確認</h3>
-      <h4 class="order-confirm-subtitle">お届け先</h4>
-      <el-row>
-        <el-col :span="7" :offset="1">
-          お名前
-        </el-col>
-        <el-col :span="14" :offset="2">
-          {{ orderForm.name }}
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="7" :offset="1">
-          ご住所（都道府県）
-        </el-col>
-        <el-col :span="14" :offset="2">
-          {{ orderForm.prefecture }}
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="7" :offset="1">
-          ご住所（市区町村）
-        </el-col>
-        <el-col :span="14" :offset="2">
-          {{ orderForm.address }}
-        </el-col>
-      </el-row>
-      <h4 class="order-confirm-subtitle">ご注文内容</h4>
-      <el-row>
-        <el-col :span="7" :offset="1">
-          商品名
-        </el-col>
-        <el-col :span="14" :offset="2">
-          {{ orderForm.itemName }}
-        </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="7" :offset="1">
-          数量
-        </el-col>
-        <el-col :span="14" :offset="2">
-          {{ orderForm.itemNum }}
-        </el-col>
-      </el-row>
-      <div class="order-confirm-buttons">
-        <el-button type="info" @click="executeOrder">購入を確定する</el-button>
-        <el-button @click="back">戻る</el-button>
-      </div>
+  <el-row :gutter="20">
+    <el-col :xs="{span: 20, offset: 2}" :sm="{span: 12, offset: 6}">
+      <h2 class="sub-title">ご注文内容の確認</h2>
+      <section>
+        <h3>お届け先</h3>
+        <el-row>
+          <el-col :span="10">
+            お名前
+          </el-col>
+          <el-col :span="14">
+            {{ orderForm.name }}
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="10">
+            ご住所<br>（都道府県）
+          </el-col>
+          <el-col :span="14">
+            {{ orderForm.prefecture }}
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="10">
+            ご住所<br>（市区町村）
+          </el-col>
+          <el-col :span="14">
+            {{ orderForm.address }}
+          </el-col>
+        </el-row>
+      </section>
+      <section>
+        <h3>ご注文内容</h3>
+        <el-row>
+          <el-col :span="10">
+            商品名
+          </el-col>
+          <el-col :span="14">
+            {{ orderForm.itemName }}
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="10">
+            数量
+          </el-col>
+          <el-col :span="14">
+            {{ orderForm.itemNum }}
+          </el-col>
+        </el-row>
+      </section>
+      <section class="order-confirm-buttons">
+        <el-row :gutter="20">
+          <el-col :xs="24" :sm="12">
+            <el-button class="w-100" type="info" @click="executeOrder">購入を確定する</el-button>
+          </el-col>
+          <el-col :xs="24" :sm="12">
+            <el-button class="w-100" @click="back">戻る</el-button>
+          </el-col>
+        </el-row>
+      </section>
     </el-col>
   </el-row>
 </template>
@@ -75,30 +85,9 @@ export default {
   }
 }
 </script>
-<style scoped>
-.order-confirm-title {
-  text-align: center;
-  margin: 0 0 30px;
-}
-.order-confirm-subtitle {
-  padding: 10px;
-}
-.order-confirm-buttons {
-  text-align: center;
-}
-.el-button {
-  margin-top: 22px;
-}
 
-@media screen and (max-width:768px){
-  .order-confirm {
-    width: 100%;
-    padding: 10%;
-    margin: 0 auto;
-  }
-  .order-confirm-buttons .el-button{
-    width: 100%;
-    margin: 20px 0 5px;
-  }
+<style scoped>
+.order-confirm-buttons .el-col {
+  padding-bottom: 20px;
 }
 </style>

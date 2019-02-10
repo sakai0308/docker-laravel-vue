@@ -1,19 +1,24 @@
 <template>
   <el-row>
     <el-col :span="20" :offset="2">
-      <h1 class="item-list-title">商品一覧</h1>
-      <el-col :xs="24" :sm="8" v-for="itemDetail in itemList" :key="itemDetail.id">
-        <div class="item">
-          <img :src="'/static/images/' + itemDetail.image_filename" class="image">
-          <p>{{ itemDetail.item_name }}</p>
-          <p class="price">¥ {{ itemDetail.price.toLocaleString() }}</p>
-          <p>
-            <router-link :to="{ name: 'ItemDetail', params: { id: itemDetail.id }}">
-              <el-button type="round">詳細を見る</el-button>
-            </router-link>
-          </p>
-        </div>
-      </el-col>
+      <h2 class="sub-title">商品一覧</h2>
+      <template v-if="itemList.length">
+        <el-col :xs="24" :sm="8" v-for="itemDetail in itemList" :key="itemDetail.id">
+          <div class="text-center">
+            <img class="w-100" :src="'/static/images/' + itemDetail.image_filename">
+            <p>{{ itemDetail.item_name }}</p>
+            <p class="item-price">¥ {{ itemDetail.price.toLocaleString() }}</p>
+            <p>
+              <router-link :to="{ name: 'ItemDetail', params: { id: itemDetail.id }}">
+                <el-button type="round">詳細を見る</el-button>
+              </router-link>
+            </p>
+          </div>
+        </el-col>
+      </template>
+      <template v-else>
+        Loading...
+      </template>
     </el-col>
   </el-row>
 </template>
@@ -32,20 +37,8 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  width: 100%;
-}
-.item {
-  text-align: center;
-}
-.price {
+.item-price {
   font-size: 1.2em;
   font-weight: 700;
-}
-
-@media screen and (max-width:768px){
-  .item-list-title {
-    text-align: center;
-  }
 }
 </style>

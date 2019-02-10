@@ -1,23 +1,28 @@
 <template>
   <el-row>
     <el-col :span="20" :offset="2">
-      <el-col :xs="24" :sm="12">
-        <img :src="'/static/images/' + itemDetail.image_filename" class="image">
-      </el-col>
-      <el-col :xs="24" :sm="12">
+      <template v-if="Object.keys(itemDetail).length">
+        <el-col :xs="24" :sm="12">
+          <img class="w-100" :src="'/static/images/' + itemDetail.image_filename">
+        </el-col>
+        <el-col :xs="24" :sm="12">
           <h3>{{ itemDetail.item_name }}</h3>
-          <div class="description">
-            <h4 class="description-label">商品説明</h4>
+          <section>
+            <h4>商品説明</h4>
             <p>{{ itemDetail.description }}</p>
-          </div>
-          <p class="price">¥ {{ itemDetail.price.toLocaleString() }}</p>
-          <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
+            <p class="item-price">¥ {{ itemDetail.price.toLocaleString() }}</p>
+          </section>
+          <el-form class="text-center" ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
             <el-form-item label="数量" prop="itemNum">
               <el-input v-model="orderForm.itemNum"></el-input>
             </el-form-item>
             <el-button type="round" @click="submitForm" icon="el-icon-goods">購入する</el-button>
           </el-form>
-      </el-col>
+        </el-col>
+      </template>
+      <template v-else>
+        Loading...
+      </template>
     </el-col>
   </el-row>
 </template>
@@ -27,7 +32,8 @@ import { mapGetters } from 'vuex'
 
 export default {
   props: {
-    id: Number
+    id: Number,
+    required: true
   },
   data () {
     return {
@@ -62,18 +68,8 @@ export default {
 </script>
 
 <style scoped>
-.image {
-  width: 100%;
-}
-.price {
-  font-size: 1.4em;
-  font-weight: 700;
-}
-.description-label {
+.item-price {
   font-size: 1.2em;
   font-weight: 700;
-}
-.el-form {
-  text-align: center;
 }
 </style>

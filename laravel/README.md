@@ -43,7 +43,7 @@ http://192.168.99.100:8000/
 # Seedを実行し、テストデータ投入
 ```
 Docker内
-# php artisan key:generate
+# php artisan key:generate ←いらない？
 # cp -pr .env.example .env
 # php artisan migrate
 # php artisan db:seed

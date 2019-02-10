@@ -1,19 +1,9 @@
 <template>
   <div id="app">
-    <el-header class="header">
+    <el-header>
       <router-link :to="{ name: 'ItemList' }">
-      <h1 class="header-title">VUE.JS EC</h1>
+        <h1 class="header-title">VUE.JS EC</h1>
       </router-link>
-      <ul class="menu-list">
-        <li>ホーム</li>
-        <li>カテゴリー</li>
-        <li>カート</li>
-      </ul>
-      <div class="menu">
-        <li></li>
-        <li></li>
-        <li></li>
-      </div>
     </el-header>
     <div class="content">
       <router-view/>
@@ -46,63 +36,33 @@ export default {
 }
 li {
   list-style: none;
-  padding: 0 30px;
 }
-.header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 15%;
-  height: 50px;
-  width: 100%;
+section {
+  margin: 15px 0;
+}
+.el-header, .el-footer {
+  padding: 0px;
+  text-align: center;
+  line-height: 60px;
   color: white;
   background: black;
-  position: fixed;
-  z-index: 1000;
 }
-.header >:first-child {
-  margin-right: auto;
+.content {
+  min-height: calc(100vh - 120px);
+  padding: 30px 0;
 }
-
 .router-link-active {
   text-decoration: none;
   color: white;
 }
-.menu {
-  width: 40px;
-  height: 40px;
-  margin: 5px 0;
-  display: none;
-}
-.menu li {
-  color: white;
-  width: 30px;
-  height: 5px;
-  margin: 5px;
-  padding: 0;
-  border-bottom: solid 2px white;
-}
-.menu-list {
-  display: flex;
-}
-.content {
-  min-height: 95vh;
-  padding-top: 100px;
-}
-.footer {
-  margin-top: 20px;
-  line-height: 40px;
+.sub-title {
   text-align: center;
-  color: white;
-  background: black;
+  margin: 0 0 30px;
 }
-
-@media screen and (max-width:768px){
-  .menu-list {
-    display: none;
-  }
-  .menu {
-    display: block;
-  }
+.w-100 {
+  width: 100%;
+}
+.text-center {
+  text-align: center;
 }
 </style>

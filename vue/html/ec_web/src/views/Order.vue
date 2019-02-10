@@ -1,31 +1,35 @@
 <template>
-  <el-row>
-    <el-col :gutter="20">
-      <el-col :span="12" :offset="6">
-        <el-form ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
-          <h3 class="order-title">ご購入手続き</h3>
-          <el-form-item label="お名前" prop="name">
-            <el-input v-model="orderForm.name"></el-input>
-          </el-form-item>
-          <el-form-item label="ご住所（都道府県）" prop="prefecture">
-            <el-select v-model="orderForm.prefecture" placeholder="都道府県を選択してください">
-              <el-option
-                v-for="prefecture in prefectures"
-                :key="prefecture.value"
-                :label="prefecture.label"
-                :value="prefecture.value">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="ご住所 (市区町村)" prop="address">
-            <el-input v-model="orderForm.address"></el-input>
-          </el-form-item>
-          <div class="order-buttons">
-            <el-button type="info" @click="submitForm">注文内容を確認する</el-button>
-            <el-button @click="back">キャンセル</el-button>
-          </div>
-        </el-form>
-      </el-col>
+  <el-row :gutter="20">
+    <el-col :xs="{span: 20, offset: 2}" :sm="{span: 12, offset: 6}">
+      <el-form class="text-center" ref="refOrderForm" :model="orderForm" :rules="rulesOrderForm">
+        <h2 class="sub-title">ご購入手続き</h2>
+        <el-form-item label="お名前" prop="name">
+          <el-input v-model="orderForm.name"></el-input>
+        </el-form-item>
+        <el-form-item label="ご住所（都道府県）" prop="prefecture">
+          <el-select class="w-100" v-model="orderForm.prefecture" placeholder="都道府県を選択してください">
+            <el-option
+              v-for="prefecture in prefectures"
+              :key="prefecture.value"
+              :label="prefecture.label"
+              :value="prefecture.value">
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="ご住所 (市区町村)" prop="address">
+          <el-input v-model="orderForm.address"></el-input>
+        </el-form-item>
+        <div class="order-buttons">
+          <el-row :gutter="20">
+            <el-col :xs="24" :sm="12">
+              <el-button class="w-100" type="info" @click="submitForm">注文内容を確認する</el-button>
+            </el-col>
+            <el-col :xs="24" :sm="12">
+              <el-button class="w-100" @click="back">キャンセル</el-button>
+            </el-col>
+          </el-row>
+        </div>
+      </el-form>
     </el-col>
   </el-row>
 </template>
@@ -87,28 +91,9 @@ export default {
   }
 }
 </script>
-<style scoped>
-.order-title {
-  text-align: center;
-  margin: 0 0 30px;
-}
-.el-form {
-  text-align: center;
-}
-.el-select {
-  width: 100%;
-}
 
-@media screen and (max-width:768px){
-  .el-col-12 {
-    width: 100%;
-    padding: 0 10%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .order-buttons .el-button{
-    width: 100%;
-    margin: 20px 0 5px;
-  }
+<style scoped>
+.order-buttons .el-col {
+  padding-bottom: 20px;
 }
 </style>
