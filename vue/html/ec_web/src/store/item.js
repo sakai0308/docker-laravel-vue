@@ -1,8 +1,5 @@
-import axios from 'axios'
-
-/*
 // TODO: 商品リストの配列(Laravel使わない時は一旦これで)
-const database = [
+const itemList = [
   { id: 1, item_name: 'Tシャツ', price: 2980, description: 'ラウンドネックのTシャツです', image_filename: 't-shirt.png' },
   { id: 2, item_name: 'Yシャツ', price: 3980, description: '長袖のYシャツです。', image_filename: 'y-shirt.png' },
   { id: 3, item_name: 'ショートパンツ', price: 4980, description: 'ショート丈のパンツです。', image_filename: 's-pants.png' },
@@ -10,8 +7,6 @@ const database = [
   { id: 5, item_name: 'ハット', price: 3980, description: 'フリーサイズのハットです', image_filename: 'hat.png' },
   { id: 6, item_name: 'スニーカー', price: 7980, description: 'ローカットのスニーカーです。', image_filename: 'sneakers.png' }
 ]
-*/
-
 export default {
   namespaced: true,
   state: {
@@ -35,21 +30,13 @@ export default {
   },
   actions: {
     getItemList ({ commit }) {
-      axios.get(`${process.env.API_ENDPOINT}/api/items/`)
-        .then(response => {
-          if (response.status === 200) {
-            commit('setItemList', response)
-          }
-        })
+      commit('setItemList', { data: itemList })
     },
     getItemDetail ({ commit }, id) {
       commit('resetItemDetail') // 事前にアイテム詳細データを初期化する
-      axios.get(`${process.env.API_ENDPOINT}/api/items/${id}`)
-        .then(response => {
-          if (response.status === 200) {
-            commit('setItemDetail', response)
-          }
-        })
+      const row = itemList.filter(item => item.id === id)[0]
+      commit('setItemDetail', { data: row })
     }
   }
 }
+ 

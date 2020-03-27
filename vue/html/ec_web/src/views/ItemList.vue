@@ -34,6 +34,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('item/getItemList')
+    console.log('呼び出しました')
   }
 }
 </script>
