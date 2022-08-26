@@ -24,9 +24,11 @@ services:
 
   # MySQL
   mysql:
-    image: mysql:5.7.22
+    image: mysql:5.7
+    platform: linux/x86_64 # M1チップ対応のため追記
     ports:
       - 3306:3306
+    command: mysqld --sql_mode=""
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_USER: test
@@ -34,7 +36,6 @@ services:
         MYSQL_DATABASE: sample_db
     volumes:
       - mysql-data:/var/lib/mysql
-    
 
 # named volume
 volumes:
